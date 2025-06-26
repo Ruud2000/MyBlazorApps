@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingPizza", "BlazingPizz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstRazorClassLibrary", "FirstRazorClassLibrary\FirstRazorClassLibrary.csproj", "{F3C886D5-D750-41E0-90C6-74C41393D4A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectFour", "ConnectFour\ConnectFour.csproj", "{056ACD33-1688-4180-BCAC-58D331E645AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F3C886D5-D750-41E0-90C6-74C41393D4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3C886D5-D750-41E0-90C6-74C41393D4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3C886D5-D750-41E0-90C6-74C41393D4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056ACD33-1688-4180-BCAC-58D331E645AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056ACD33-1688-4180-BCAC-58D331E645AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056ACD33-1688-4180-BCAC-58D331E645AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056ACD33-1688-4180-BCAC-58D331E645AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
