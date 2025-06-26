@@ -1,11 +1,12 @@
-﻿@inject GameState State
+﻿@using System.Drawing
+@inject GameState State
 
 <HeadContent>
     <style>
         :root {
-            --board-bg: yellow;
-            --player1: red;
-            --player2: blue;
+            --board-bg: @ColorTranslator.ToHtml(BoardColor);
+            --player1: @ColorTranslator.ToHtml(Player1Color);
+            --player2: @ColorTranslator.ToHtml(Player2Color);
         }
     </style>
 </HeadContent>
@@ -42,6 +43,15 @@
     private string[] pieces = new string[42];
     private string winnerMessage = string.Empty;
     private string errorMessage = string.Empty;
+
+    [Parameter]
+    public Color BoardColor { get; set; } = ColorTranslator.FromHtml("yellow");
+
+    [Parameter]
+    public Color Player1Color { get; set; } = ColorTranslator.FromHtml("red");
+
+    [Parameter]
+    public Color Player2Color { get; set; } = ColorTranslator.FromHtml("blue");
 
     protected override void OnInitialized()
     {
