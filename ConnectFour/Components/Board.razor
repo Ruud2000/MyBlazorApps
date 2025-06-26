@@ -15,7 +15,14 @@
     @for (byte i = 0; i < 7; i++)
     {
         var col = i;
-        <span title="Click to play a piece" @onclick="() => PlayPiece(col)">🔽</span>
+        @if (CanPlayColumn(col))
+        {
+            <span title="Click to play a piece" @onclick="() => PlayPiece(col)">🔽</span>
+        }
+        else
+        {
+            <span></span>
+        }
     }
 </nav>
 <article>
@@ -90,6 +97,8 @@
         errorMessage = string.Empty;
         pieces = new string[42];
     }
+
+    private bool CanPlayColumn(byte col) => State.CanPlayColumn(col);
 
     private string CurrentTurn => (winnerMessage == string.Empty) ? $"Player {State.PlayerTurn}'s Turn" : "";
     private string ResetStyle => (winnerMessage == string.Empty) ? "display: none;" : "";

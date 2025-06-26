@@ -35,7 +35,6 @@ public class GameState
         // Horizontal rows
         for (byte row = 0; row < 6; row++)
         {
-
             byte rowCol1 = (byte)(row * 7);
             byte rowColEnd = (byte)((row + 1) * 7 - 1);
             byte checkCol = rowCol1;
@@ -54,7 +53,6 @@ public class GameState
         // Vertical Columns
         for (byte col = 0; col < 7; col++)
         {
-
             byte colRow1 = col;
             byte colRowEnd = (byte)(35 + col);
             byte checkRow = colRow1;
@@ -73,7 +71,6 @@ public class GameState
         // forward slash diagonal "/"
         for (byte col = 0; col < 4; col++)
         {
-
             // starting column must be 0-3
             byte colRow1 = (byte)(21 + col);
             byte colRowEnd = (byte)(35 + col);
@@ -93,7 +90,6 @@ public class GameState
         // back slash diaganol "\"
         for (byte col = 0; col < 4; col++)
         {
-
             // starting column must be 0-3
             byte colRow1 = (byte)(0 + col);
             byte colRowEnd = (byte)(14 + col);
@@ -170,6 +166,16 @@ public class GameState
     public void ResetBoard()
     {
         TheBoard = new List<int>(new int[42]);
+    }
+
+    /// <summary>
+    /// Check if the column has still room to add an additional piece.
+    /// </summary>
+    /// <param name="column">The column to check.</param>
+    /// <returns>True when there is room for another piece, else false.</returns>
+    public bool CanPlayColumn(int column)
+    {
+        return TheBoard[column] == 0;
     }
 
     private byte ConvertLandingSpotToRow(int landingSpot)
